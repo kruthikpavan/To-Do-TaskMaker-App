@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'STIX Two Math', serif;
+
+
+}
+section {
+  background: linear-gradient(-45deg,#EE7752,#E73C7E,#23A6D5,#23D5AB);
+  background-size: 400% 400%;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  animation: change 4s ease-in-out infinite;
+
+}
+@keyframes change{
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 50% 70%;
+  }
+  100%{
+    background-position: 0 50%;
+  }
+}
+h3::first-letter{
+  font-size: 2rem;
+}
+h3{
+  
+    line-height: 2vh;
+    font-size:1.5rem;
+    opacity:0.95;
+    text-decoration: aqua;
+    color: rgb(222, 228, 255);
+    padding-right: 7px;
+}
+header {
+  font-weight: bold;
+  /* padding-right: 10px; */
+}
+header,
+form {
+  min-height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+input{
+    text-overflow: ellipsis;
+    padding-right: 7px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+form button{
+  width: 30px;
+}
+form input,
+form button {
+ 
+  height: 25px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+todo-button {
+ 
+  border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    
+  
+}
+button:hover {
+  background-color: rgba(122, 61, 219, 0.438);
+  color: rgb(0, 225, 255);
+}
+
+.todo-container {
+  display: flex;
+ 
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.todo-div{
+    display: flex;
+   
+    margin: 0.6rem;
+    background-color: white;
+    transition: all 1s ease;
+    
+    
+    
+}
+
+
+
+
+.fa-check,.fa-trash{
+    pointer-events: none
+}
+input todo-element{
+    padding: 0.5rem;
+    flex:1;
+    border: none;
+    appearance:none;
+    -webkit-appearance: none;
+   
+    
+  
+    
+}
+.todo-trash,.todo-check{
+    width: 15%;
+    padding: 0.5rem;
+    background-color: rgb(255, 165, 0);
+    color:white;
+    cursor: pointer;
+    border: none;
+   
+}
+.todo-check{
+    background-color: green;
+    
+}
+
+.completed input{
+    text-decoration: line-through;
+    opacity: 0.6;
+    
+}
+
+.completed{
+    opacity: 0.6;
+
+}
+.fall{
+    transform: translateY(3rem) rotateZ(15deg);
+    opacity: 0;
+}
+
+select{
+
+    appearance:none;
+    padding:0.2rem;
+    margin-left:0.6rem;
+    border:none;
+    border-radius: 2px;
+    -webkit-appearance: none;
+    padding-right: 2rem;
+    cursor: pointer;
+    
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.select{
+    position: relative;
+    overflow: hidden;
+}
+.select::after{
+    content:"\1F893";
+  
+
+    position: absolute;
+    padding:5px;
+    top:0;
+    right:0;
+    pointer-events: none;
+   
+}
+.select:hover::after{
+    background-color: rgba(122, 61, 219, 0.438);
+    color: rgb(0, 225, 255);
+
+}
